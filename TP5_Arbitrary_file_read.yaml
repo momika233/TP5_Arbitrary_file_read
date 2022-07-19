@@ -19,7 +19,7 @@ requests:
     matchers:
       - type: regex
         regex:
-          - "root:x:0:0"
+          - "ErrorException"
         part: body
 
       - type: status
